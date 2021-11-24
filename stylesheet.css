@@ -11,28 +11,136 @@ html {
 body {
 	background-color: hsl(217, 54%, 11%);
 	color: hsl(215, 51%, 70%);
-	font-size: 18px;
-	height: 90rem;
+	font-size: 1.8rem;
+	font-weight: 300;
+	font-family: "Outfit", sans-serif;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	position: relative;
+
+	overflow-x: hidden;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: hsl(178, 100%, 50%);
 }
 
 .card {
 	background-color: hsl(216, 50%, 16%);
 	border-radius: 2rem;
-	height: 59.2rem;
-	width: 34.8rem;
+	/* height: 59.2rem; */
+	max-width: 34.8rem;
+	margin: 15.2rem 0 15.6rem 0;
 }
 
-.equilibrium {
+.card-container {
+	margin: 2.2rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.img-container {
+	background-image: url(images/image-equilibrium.jpg);
+	background-size: 30.4rem;
+	height: 30.4rem;
+	width: 30.4rem;
+
+	border-radius: 2rem;
+	overflow: hidden;
+	margin-bottom: 3.2rem;
+}
+
+.view-icon {
+	display: none;
+}
+
+.img-container:hover,
+.img-container:active {
+	background-image: url(images/icon-view.svg),
+		linear-gradient(rgba(0, 255, 247, 0.5), rgba(0, 255, 247, 0.5)),
+		url(images/image-equilibrium.jpg);
+	background-size: 5rem, contain, contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.title {
+	font-size: 2.2rem;
+	font-weight: 600;
+
+	margin-bottom: 2.4rem;
+}
+
+.eth-days-left-container {
+	display: flex;
+	justify-content: space-between;
+
+	border-bottom: 1px solid hsl(215, 32%, 27%);
+	/* margin-bottom: 1.6rem; */
+}
+
+.eth-container {
+	display: flex;
+	gap: 0.5rem;
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: hsl(178, 100%, 50%);
+	margin: 3.3rem 0 2.4rem;
+	align-items: center;
+}
+
+.days-left-container {
+	display: flex;
+	gap: 0.7rem;
+	align-items: center;
+}
+
+.creator {
+	display: flex;
+	gap: 1.5rem;
+	font-size: 1.6rem;
+	font-weight: 400;
+	align-self: flex-start;
+}
+
+.creator-img {
+	height: 3.3rem;
+	width: 3.3rem;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	margin-bottom: 0.6rem;
 }
 
 .attribution {
-	position: absolute;
+	/* position: absolute;
 	left: 1rem;
-	bottom: 1rem;
+	bottom: 1rem; */
+	align-self: flex-start;
+	padding: 1rem;
+}
+
+@media (max-width: 24rem) {
+	body {
+		height: 66.7rem;
+	}
+
+	.card {
+		width: 32.7rem;
+		height: 54.7rem;
+		margin: 6rem 2.4rem;
+	}
+
+	.img-container {
+		width: 28rem;
+		height: 28rem;
+	}
 }
